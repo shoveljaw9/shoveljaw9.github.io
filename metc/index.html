@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Metcn视频致力于提供高清、流畅的在线视频观看体验，涵盖影视、综艺、动漫及生活记录等多种内容。支持多端同步，无广告干扰，是您首选的在线视频平台。">
+    <meta name="keywords" content="metcn视频, 在线观看, 高清影视, 热门综艺, 视频流媒体">
+    <title>metcn视频-高清在线影视与综艺观看平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --secondary-color: #221f1f;
+            --accent-color: #46d369;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-color: #141414;
+            --card-bg: #1f1f1f;
+            --header-height: 60px;
+            --footer-height: 50px;
+            --radius: 4px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.95);
+            height: var(--header-height);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #fff;
+            margin-left: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .search-box {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            background-color: #333;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius);
+            width: 200px;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            width: 240px;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            background: linear-gradient(to top, var(--bg-color), transparent),
+                        linear-gradient(to right, rgba(0,0,0,0.8), transparent),
+                        url('https://picsum.photos/seed/metcnhero/1920/1080') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius);
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            color: #ddd;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: var(--radius);
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #c11119;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.2);
+            color: #fff;
+            margin-left: 1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .section-link {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .section-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .video-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .card-image {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+        }
+
+        .card-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .video-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .video-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .card-info {
+            padding: 1rem;
+        }
+
+        .card-title {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .badge {
+            background-color: #333;
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-size: 0.75rem;
+        }
+
+        .badge-new {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        /* Categories */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-item {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .category-item:hover {
+            border-color: var(--primary-color);
+            background-color: #2a2a2a;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .category-name {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #1a1a1a;
+            padding: 3rem 0;
+            margin-top: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-title {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            padding: 2rem 0;
+            margin-top: auto;
+            border-top: 1px solid #333;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            color: #999;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .category-grid { grid-template-columns: repeat(2, 1fr); }
+            nav { display: none; } /* Simplified for mobile */
+            .search-box { display: none; }
+            .header-actions { display: none; }
+            .logo { margin-right: 0; }
+            .video-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+            .card-info { padding: 0.5rem; }
+            .card-title { font-size: 0.9rem; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">metcn<span>视频</span></a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">电影</a></li>
+                <li><a href="#">电视剧</a></li>
+                <li><a href="#">综艺</a></li>
+                <li><a href="#">动漫</a></li>
+                <li><a href="#">纪录片</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索影片...">
+            <button type="button">🔍</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">年度重磅推荐</span>
+            <h1>探索无限视界，尽在 metcn视频</h1>
+            <p>Metcn视频汇聚全球优质影视资源，提供高清流畅的在线播放体验。无论是经典老片还是最新大片，这里都能满足您的观影需求。</p>
+            <div>
+                <button class="btn btn-primary">立即观看</button>
+                <button class="btn btn-secondary">了解更多</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Categories -->
+        <section class="categories">
+            <div class="section-header">
+                <h2 class="section-title">热门分类</h2>
+                <a href="#" class="section-link">查看全部 ></a>
+            </div>
+            <div class="category-grid">
+                <div class="category-item">
+                    <span class="category-icon">🎬</span>
+                    <span class="category-name">动作电影</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">💑</span>
+                    <span class="category-name">爱情剧情</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">👽</span>
+                    <span class="category-name">科幻冒险</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🃏</span>
+                    <span class="category-name">悬疑推理</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">📺</span>
+                    <span class="category-name">国产剧</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">💃</span>
+                    <span class="category-name">偶像综艺</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">⚔️</span>
+                    <span class="category-name">热血动漫</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-icon">🌍</span>
+                    <span class="category-name">自然纪录</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Updates -->
+        <section class="latest-updates">
+            <div class="section-header">
+                <h2 class="section-title">最新更新</h2>
+                <a href="#" class="section-link">更多更新 ></a>
+            </div>
+            <div class="video-grid">
+                <!-- Video Card 1 -->
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn1/400/225" alt="电影封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <span class="badge badge-new">HD</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">星际穿越：时空之旅</h3>
+                        <div class="card-meta">
+                            <span>2023</span>
+                            <span>2小时15分</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 2 -->
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn2/400/225" alt="电视剧封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">都市霓虹：第3季完结</h3>
+                        <div class="card-meta">
+                            <span>更新至24集</span>
+                            <span>科幻</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 3 -->
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn3/400/225" alt="综艺封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">极速挑战：极限挑战赛</h3>
+                        <div class="card-meta">
+                            <span>综艺</span>
+                            <span>高清</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 4 -->
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn4/400/225" alt="动漫封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">龙之谷：传说再起</h3>
+                        <div class="card-meta">
+                            <span>动漫</span>
+                            <span>国语</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 5 -->
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn5/400/225" alt="纪录片封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">深海探秘：未知的领域</h3>
+                        <div class="card-meta">
+                            <span>纪录片</span>
+                            <span>4K</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 6 -->
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn6/400/225" alt="电影封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">暗夜追凶：最后的真相</h3>
+                        <div class="card-meta">
+                            <span>悬疑</span>
+                            <span>1小时50分</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Top Charts -->
+        <section class="top-charts">
+            <div class="section-header">
+                <h2 class="section-title">本周热播榜</h2>
+                <a href="#" class="section-link">查看排行 ></a>
+            </div>
+            <div class="video-grid">
+                <!-- Repeating structure for Top Charts -->
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn7/400/225" alt="热播封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <span class="badge">1</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">时光旅行者的妻子</h3>
+                        <div class="card-meta">
+                            <span>爱情</span>
+                            <span>热播中</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn8/400/225" alt="热播封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <span class="badge">2</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">黑客帝国：起源</h3>
+                        <div class="card-meta">
+                            <span>科幻</span>
+                            <span>独家</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn9/400/225" alt="热播封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">舌尖上的中国：四季</h3>
+                        <div class="card-meta">
+                            <span>美食</span>
+                            <span>纪录片</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/metcn10/400/225" alt="热播封面">
+                        <div class="play-overlay">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <span class="badge">4</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">赛博朋克：边缘行者</h3>
+                        <div class="card-meta">
+                            <span>动画</span>
+                            <span>高燃</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">极速播放</h3>
+                <p class="feature-desc">智能线路选择，毫秒级缓冲，告别卡顿。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💎</div>
+                <h3 class="feature-title">超清画质</h3>
+                <p class="feature-desc">支持4K、1080P、720P多种清晰度切换。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎧</div>
+                <h3 class="feature-title">沉浸音效</h3>
+                <p class="feature-desc">杜比全景声支持，带来影院级听觉享受。</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <h3 class="feature-title">多端同步</h3>
+                <p class="feature-desc">手机、平板、电脑无缝切换，继续观看。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">metcn<span>视频</span></div>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">用户协议</a>
+                <a href="#">隐私政策</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系客服</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 metcn视频 All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
