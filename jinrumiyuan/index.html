@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进入蜜源-优质蜂蜜产地直供与养蜂知识分享平台</title>
+    <meta name="description" content="进入蜜源，致力于连接优质蜂蜜产地与消费者。提供蜂产品选购指南、真假蜂蜜辨别方法、蜂蜜养生食谱及养蜂技术科普，打造值得信赖的蜂产品服务平台。">
+    <meta name="keywords" content="进入蜜源,蜂蜜,蜂产品,蜂蜜选购,蜂蜜真假辨别,养蜂技术,蜂蜜食谱">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #f4a261;
+            --primary-hover: #e76f51;
+            --secondary-color: #2a9d8f;
+            --text-main: #264653;
+            --text-light: #6d8d90;
+            --bg-body: #fdfcf8;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(42, 157, 143, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 16px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn-primary:hover {
+            background: #21867a;
+            border-color: #21867a;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 100px 0 80px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #e9f5f3 0%, #fdfcf8 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e9f5f3;
+            color: var(--secondary-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--bg-card);
+        }
+
+        .section-title {
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background: var(--bg-body);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: rgba(42, 157, 143, 0.2);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #e9f5f3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Honey Showcase */
+        .showcase {
+            background: var(--bg-body);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow);
+        }
+
+        .product-img {
+            height: 220px;
+            width: 100%;
+            position: relative;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .product-info .origin {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-hover);
+        }
+
+        .btn-sm {
+            padding: 6px 16px;
+            font-size: 13px;
+        }
+
+        /* Guide Section */
+        .guide {
+            background: var(--bg-card);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .guide-sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .guide-list li {
+            margin-bottom: 15px;
+        }
+
+        .guide-list a {
+            display: block;
+            padding: 12px 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .guide-list a:hover {
+            background: #e9f5f3;
+            color: var(--secondary-color);
+            padding-left: 20px;
+        }
+
+        .guide-content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .guide-content p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .step-list {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .step-list li {
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: var(--bg-body);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--secondary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            color: var(--text-light);
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a2c2e;
+            color: #b0c4b8;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin: 0 auto 40px;
+            }
+
+            .hero-image {
+                margin-top: 30px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                display: none;
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>🍯</span> 进入蜜源
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#products">精选蜂产品</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#knowledge">养蜂知识</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline">登录</a>
+                <a href="#" class="btn btn-primary">注册会员</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="badge">天然原蜜 · 产地直供</span>
+                        <h1>探索自然馈赠的纯净甜蜜</h1>
+                        <p>进入蜜源致力于连接全球优质蜂场与消费者。从蜂巢到舌尖，我们严格把控每一滴蜂蜜的品质，为您提供健康、天然、真实的蜂产品体验。</p>
+                        <div class="flex-center" style="gap: 15px;">
+                            <a href="#products" class="btn btn-primary">立即选购</a>
+                            <a href="#guide" class="btn btn-outline">了解蜂蜜知识</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://picsum.photos/seed/honeycomb/600/400" alt="蜂蜜蜂巢特写" width="600" height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section-padding features">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>为什么选择进入蜜源？</h2>
+                    <p>我们不仅销售蜂蜜，更致力于传递健康的生活方式</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>源头直采</h3>
+                        <p>直接对接新疆、秦岭等优质蜂场，减少中间环节，确保每一罐蜂蜜都来自原产地，新鲜直达。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h3>科学检测</h3>
+                        <p>每批次产品均经过第三方权威机构检测，确保无抗生素残留、无添加糖浆，数据透明可查。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>品质保障</h3>
+                        <p>提供完善的售后保障，如发现非原蜜，支持七天无理由退款，让您购物无忧。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section id="products" class="section-padding showcase">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>精选蜂产品系列</h2>
+                    <p>根据季节与产地，为您甄选最适合的天然好蜜</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-img">
+                            <span class="product-tag">热销</span>
+                            <img src="https://picsum.photos/seed/honey1/400/300" alt="新疆天山百花蜜" width="400" height="300">
+                        </div>
+                        <div class="product-info">
+                            <h3>新疆天山百花蜜</h3>
+                            <span class="origin">产地：新疆伊犁</span>
+                            <div class="product-footer">
+                                <span class="price">¥128.00</span>
+                                <a href="#" class="btn btn-sm btn-outline">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <span class="product-tag">养生</span>
+                            <img src="https://picsum.photos/seed/honey2/400/300" alt="洋槐蜜" width="400" height="300">
+                        </div>
+                        <div class="product-info">
+                            <h3>山东洋槐蜜</h3>
+                            <span class="origin">产地：山东泰安</span>
+                            <div class="product-footer">
+                                <span class="price">¥98.00</span>
+                                <a href="#" class="btn btn-sm btn-outline">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://picsum.photos/seed/honey3/400/300" alt="枣花蜜" width="400" height="300">
+                        </div>
+                        <div class="product-info">
+                            <h3>宁夏中宁枣花蜜</h3>
+                            <span class="origin">产地：宁夏中卫</span>
+                            <div class="product-footer">
+                                <span class="price">¥158.00</span>
+                                <a href="#" class="btn btn-sm btn-outline">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <span class="product-tag">新品</span>
+                            <img src="https://picsum.photos/seed/honey4/400/300" alt="蜂王浆" width="400" height="300">
+                        </div>
+                        <div class="product-info">
+                            <h3>新鲜蜂王浆</h3>
+                            <span class="origin">产地：吉林长白山</span>
+                            <div class="product-footer">
+                                <span class="price">¥298.00</span>
+                                <a href="#" class="btn btn-sm btn-outline">查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="section-padding guide">
+            <div class="container">
+                <div class="guide-grid">
+                    <aside class="guide-sidebar">
+                        <h3>选购指南</h3>
+                        <ul class="guide-list">
+                            <li><a href="#">如何辨别真假蜂蜜？</a></li>
+                            <li><a href="#">不同花蜜的功效区别</a></li>
+                            <li><a href="#">蜂蜜结晶是坏事吗？</a></li>
+                            <li><a href="#">蜂蜜保存的正确方法</a></li>
+                            <li><a href="#">适合人群与禁忌</a></li>
+                        </ul>
+                    </aside>
+                    <article class="guide-content">
+                        <h2>如何辨别真假蜂蜜？</h2>
+                        <p>市面上的蜂蜜种类繁多，价格差异巨大。学会辨别真假蜂蜜，是保障健康的第一步。进入蜜源为您整理了最实用的鉴别方法。</p>
+                        <p>首先，看色泽与质地。真蜂蜜通常色泽清透或微黄，质地浓稠。假蜜或劣质蜜往往过于透明，或者质地稀薄。其次，看拉丝。用筷子挑起蜂蜜，真蜂蜜会拉出细长、有弹性的丝条，断开后会自动回缩；而糖水勾兑的蜂蜜则拉丝短且断开即掉。</p>
+                        <h3>常见鉴别技巧：</h3>
+                        <ol class="step-list">
+                            <li><strong>水温测试：</strong>将少量蜂蜜放入水中，真蜂蜜会慢慢化开并下沉，而糖浆类假蜜会迅速溶解或漂浮。</li>
+                            <li><strong>燃烧测试：</strong>取少量蜂蜜放在纸上，真蜂蜜水分少，水渍不易扩散，且不易燃烧；假蜜则水分大，易扩散且易燃。</li>
+                            <li><strong>嗅觉：</strong>真蜂蜜具有独特的花香，假蜜则只有甜味或化学气味。</li>
+                        </ol>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding faq">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>常见问题解答</h2>
+                    <p>关于蜂蜜购买与使用的疑问，这里都有答案</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">蜂蜜可以加热喝吗？</div>
+                        <div class="faq-answer">
+                            <p>建议不超过60℃温水冲泡。高温会破坏蜂蜜中的活性酶和维生素，降低营养价值。冲泡后放置片刻即可饮用。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">为什么蜂蜜会结晶？</div>
+                        <div class="faq-answer">
+                            <p>蜂蜜结晶是天然现象，通常发生在葡萄糖含量高的蜂蜜（如洋槐蜜、枣花蜜）中。结晶并不代表蜂蜜被掺入了糖或水，只是物理状态的变化，不影响食用。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">孕妇和糖尿病患者能吃蜂蜜吗？</div>
+                        <div class="faq-answer">
+                            <p>孕妇适量食用有益，但糖尿病患者应严格遵医嘱，因为蜂蜜含有果糖和葡萄糖，会导致血糖波动。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何确认蜂蜜的产地？</div>
+                        <div class="faq-answer">
+                            <p>我们每瓶蜂蜜都附带溯源二维码，扫码即可查看蜂场的地理位置、生产日期及检测报告。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>进入蜜源</h2>
+                    <p>专注于高品质蜂产品的研究与销售，致力于让每一滴蜂蜜都回归自然本味。</p>
+                    <div class="social-links">
+                        <!-- Placeholder for social icons -->
+                        <span>微信</span> | <span>微博</span> | <span>抖音</span>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">养蜂基地</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">媒体报道</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">配送说明</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">订阅优惠</a></li>
+                        <li><a href="#">养生食谱</a></li>
+                        <li><a href="#">养蜂日记</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 进入蜜源 版权所有 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
