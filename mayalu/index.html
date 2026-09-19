@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="玛雅luntan - 专注玛雅历法、神秘学交流与心灵成长社区。提供玛雅历解读、能量调频、灵性课程及高维智慧分享，打造深度连接的心灵家园。">
+    <meta name="keywords" content="玛雅luntan,玛雅历法,玛雅能量,神秘学,灵性成长,13月亮历法">
+    <title>玛雅luntan - 玛雅历法解读与灵性成长社区</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2d3a38;
+            --accent-color: #c79a6b;
+            --bg-color: #f4f1ea;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a2422 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            background-color: #dcb87d;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 40px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* Main Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary-color);
+                padding: 20px;
+                text-align: center;
+            }
+            nav ul.show {
+                display: flex;
+            }
+        }
+
+        /* Article List */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .article-body {
+            padding: 20px;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-widget h4 {
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: var(--bg-color);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+        }
+
+        .tag:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        /* Calendar Section */
+        .calendar-section {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cal-day {
+            padding: 10px 0;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+
+        .cal-day.active {
+            background-color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .cal-day.tonali {
+            color: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 40px 0 20px;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Utility */
+        .text-center { text-align: center; }
+        .mt-2 { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>☾</span> 玛雅luntan
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#calendar">13月亮历法</a></li>
+                    <li><a href="#articles">能量解读</a></li>
+                    <li><a href="#community">灵性社区</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>连接高维智慧，回归内在真理</h1>
+                <p>欢迎来到玛雅luntan，一个专注于玛雅13月亮历法、神秘学与灵性成长的深度交流平台。探索你的内在宇宙，解锁生命蓝图。</p>
+                <a href="#calendar" class="hero-btn">开启你的能量之旅</a>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="container features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">✦</span>
+                    <h3>13月亮历法解读</h3>
+                    <p>基于玛雅卓尔金历的精准能量分析，解读个人印记、图腾与调性，指引当下的生活方向。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">∞</span>
+                    <h3>高维智慧分享</h3>
+                    <p>汇集全球灵性导师观点，分享关于意识进化、时间法则与地球扬升的深度见解。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">♥</span>
+                    <h3>心灵成长社区</h3>
+                    <p>在这里找到与你同频的伙伴，参与能量调频冥想，在爱与理解中共同成长。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container content-wrapper">
+            <!-- Articles List -->
+            <section id="articles">
+                <h2 class="section-title">最新能量解读与文章</h2>
+                
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/maya1/800/400" alt="星际种子能量图" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>2023-10-24 · 频率播报</span>
+                            <span>阅读 1.2k</span>
+                        </div>
+                        <h3 class="article-title">当前行星能量：红龙日与星际种子的觉醒</h3>
+                        <p class="article-excerpt">在红龙日，我们感受到生命力的回归与原始的创造力。对于星际种子而言，这是一个确认自身使命、扎根于地球的重要时刻。本文将深入探讨如何在红龙日释放过去的束缚，拥抱新的开始。</p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/maya2/800/400" alt="13月亮历法图表" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>2023-10-23 · 历法指南</span>
+                            <span>阅读 856</span>
+                        </div>
+                        <h3 class="article-title">理解你的玛雅图腾：白世界桥的调性</h3>
+                        <p class="article-excerpt">白世界桥代表着跨越与连接。它不仅是生死的桥梁，更是意识层面的巨大飞跃。了解白世界桥的调性，可以帮助我们在面对人生转折点时，保持平衡与中道。</p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/maya3/800/400" alt="冥想场景" class="article-img">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>2023-10-22 · 冥想引导</span>
+                            <span>阅读 2.1k</span>
+                        </div>
+                        <h3 class="article-title">每日调频冥想：连接宇宙的脉动</h3>
+                        <p class="article-excerpt">无论你身处何地，都可以通过简单的呼吸练习，与当下的宇宙频率对齐。本篇冥想引导将带你进入“时间之外”的宁静空间，清理旧有的情绪记忆。</p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h4>热门图腾</h4>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">红蛇</a>
+                        <a href="#" class="tag">白风</a>
+                        <a href="#" class="tag">蓝手</a>
+                        <a href="#" class="tag">黄星星</a>
+                        <a href="#" class="tag">红月</a>
+                        <a href="#" class="tag">黑狗</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>能量日历</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 10px; color: #666;">当前周期：第 10 个波符</p>
+                    <div class="calendar-grid">
+                        <div class="cal-day tonali">1. 红蛇</div>
+                        <div class="cal-day tonali">2. 白风</div>
+                        <div class="cal-day tonali">3. 蓝手</div>
+                        <div class="cal-day tonali">4. 黄星星</div>
+                        <div class="cal-day tonali">5. 红月</div>
+                        <div class="cal-day tonali">6. 黑狗</div>
+                        <div class="cal-day tonali">7. 红天行者</div>
+                        <div class="cal-day tonali">8. 蓝风暴</div>
+                        <div class="cal-day tonali">9. 黄太阳</div>
+                        <div class="cal-day active">10. 蓝夜</div>
+                        <div class="cal-day tonali">11. 金猫</div>
+                        <div class="cal-day tonali">12. 水之花</div>
+                        <div class="cal-day tonali">13. 骨头</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h4>热门话题</h4>
+                    <ul style="font-size: 0.9rem; line-height: 2;">
+                        <li><a href="#">如何计算自己的玛雅印记？</a></li>
+                        <li><a href="#">2024年地球净化能量指南</a></li>
+                        <li><a href="#">灵性成长中的常见误区</a></li>
+                        <li><a href="#">红蛇印记的深度解析</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Calendar Highlight Section -->
+        <section id="calendar" class="calendar-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2 style="color: var(--accent-color); margin-bottom: 10px;">今日能量播报</h2>
+                    <p style="opacity: 0.8; max-width: 600px; margin: 0 auto;">蓝夜日：这是关于梦想、潜意识与丰盛的指引日。今晚，请在睡前清理思绪，让梦境指引你前行的方向。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container" style="padding: 40px 0;">
+            <h2 class="section-title">常见问题 (FAQ)</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details style="background: var(--card-bg); margin-bottom: 10px; padding: 15px; border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--primary-color);">什么是13月亮历法？</summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">13月亮历法又称卓尔金历，是玛雅文明中最核心的时间系统。它将时间划分为13个不同的能量（图腾）和20个不同的面向，每天对应一个特定的能量组合，用于指引人类与宇宙的和谐共振。</p>
+                </details>
+                <details style="background: var(--card-bg); margin-bottom: 10px; padding: 15px; border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--primary-color);">如何找到自己的玛雅印记？</summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">你需要知道你的公历出生日期。玛雅luntan 提供了在线计算工具，只需输入生日，即可自动生成你的图腾、调性以及所在的波符。</p>
+                </details>
+                <details style="background: var(--card-bg); margin-bottom: 10px; padding: 15px; border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: bold; color: var(--primary-color);">这个论坛适合初学者吗？</summary>
+                    <p style="margin-top: 10px; color: var(--text-secondary);">非常适合。我们拥有从基础概念到深度灵修的丰富内容，社区氛围友好且包容，欢迎所有对灵性探索感兴趣的伙伴加入。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于 玛雅luntan</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">我们致力于传播玛雅文明中的时间智慧与现代灵性科学的结合，为追求内在觉醒的人们提供一个纯净的交流空间。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">历法计算器</a></li>
+                        <li><a href="#">图腾图鉴</a></li>
+                        <li><a href="#">能量播报</a></li>
+                        <li><a href="#">会员注册</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱：contact@mayaluntan.com</li>
+                        <li>微信：MayaSpirit</li>
+                        <li>地址：心灵维度 88 号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 玛雅luntan. All Rights Reserved. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('#nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    navMenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
