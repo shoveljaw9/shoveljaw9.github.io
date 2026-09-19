@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="虐身文网为您提供最全的虐身虐心小说在线阅读服务，涵盖古风虐恋、现代纠葛、穿越重生等热门题材。在这里，感受文字带来的极致情感冲击，体验刻骨铭心的爱恨纠葛。">
+    <meta name="keywords" content="虐身文,虐心小说,古风虐恋,现代虐文,穿越小说,在线阅读">
+    <title>虐身文-极致情感纠葛与虐心小说在线阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #f4f2ea;
+            --card-bg: #ffffff;
+            --text-main: #2c2c2c;
+            --text-secondary: #666666;
+            --accent-color: #8e2de2;
+            --accent-hover: #4a00e0;
+            --border-color: #e0e0e0;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+            --font-serif: "Songti SC", "SimSun", "Times New Roman", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .view-more {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .view-more:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background: var(--card-bg);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-bar {
+            display: flex;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 5px 15px;
+            width: 300px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            flex: 1;
+            font-size: 0.9rem;
+        }
+
+        .search-bar button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://picsum.photos/seed/tragic/1920/1080'); /* Placeholder for mood */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            mix-blend-mode: overlay;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-tag {
+            background: rgba(142, 45, 226, 0.8);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(142, 45, 226, 0.4);
+        }
+
+        /* Category Grid */
+        .categories {
+            padding: 40px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-color);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .category-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* Content Grid (Novels) */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .novel-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .novel-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .novel-cover {
+            position: relative;
+            padding-top: 140%;
+            background: #eee;
+        }
+
+        .novel-cover img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .novel-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+
+        .novel-info {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .novel-title {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .novel-title:hover {
+            color: var(--accent-color);
+        }
+
+        .novel-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .novel-meta {
+            font-size: 0.8rem;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+
+        /* Latest Updates */
+        .update-list {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            padding: 30px;
+        }
+
+        .update-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .update-item:last-child {
+            border-bottom: none;
+        }
+
+        .update-title {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .update-title a {
+            color: var(--text-main);
+        }
+
+        .update-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .update-chapter {
+            background: #f9f9f9;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .update-time {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: white;
+            padding: 60px 0;
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .guide-item h3 {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .guide-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .guide-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .guide-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #888;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-family: var(--font-serif);
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
+            .hero {
+                height: 400px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">虐身文</a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">古风虐恋</a></li>
+                    <li><a href="#">现代纠葛</a></li>
+                    <li><a href="#">穿越重生</a></li>
+                    <li><a href="#">排行榜</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索虐身小说、书名或作者...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <span class="hero-tag">极致情感体验</span>
+                <h1>在文字的深渊里<br>寻找刻骨铭心的痛与爱</h1>
+                <p>这里汇聚了全网最经典的虐身虐心小说，不仅有撕心裂肺的离别，更有破茧成蝶的救赎。点击阅读，体验一场直击灵魂的情感旅程。</p>
+                <a href="#" class="btn">开始阅读</a>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="container categories">
+            <div class="section-header">
+                <h2 class="section-title">热门题材</h2>
+                <a href="#" class="view-more">查看全部分类 &rarr;</a>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">📜</div>
+                    <div class="category-name">古风虐恋</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🏢</div>
+                    <div class="category-name">豪门恩怨</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🚪</div>
+                    <div class="category-name">破镜重圆</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">👻</div>
+                    <div class="category-name">替身受难</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🔪</div>
+                    <div class="category-name">强制爱恋</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🧬</div>
+                    <div class="category-name">先婚后爱</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Novels -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">精选推荐</h2>
+                <a href="#" class="view-more">更多作品 &rarr;</a>
+            </div>
+            <div class="content-grid">
+                <!-- Card 1 -->
+                <article class="novel-card">
+                    <div class="novel-cover">
+                        <span class="novel-tag">古风</span>
+                        <img src="https://picsum.photos/seed/tragic1/300/420" alt="小说封面">
+                    </div>
+                    <div class="novel-info">
+                        <h3 class="novel-title"><a href="#">帝王将相：孤城落月</a></h3>
+                        <p class="novel-desc">他权倾天下，却唯独得不到她的心。为了江山，他亲手将她推向敌国，十年后重逢，她已是敌国太子妃。</p>
+                        <div class="novel-meta">
+                            <span>字数: 120万</span>
+                            <span>状态: 已完结</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="novel-card">
+                    <div class="novel-cover">
+                        <span class="novel-tag">现代</span>
+                        <img src="https://picsum.photos/seed/tragic2/300/420" alt="小说封面">
+                    </div>
+                    <div class="novel-info">
+                        <h3 class="novel-title"><a href="#">蚀骨危情：前夫请滚开</a></h3>
+                        <p class="novel-desc">一场精心策划的绑架，让他对她恨之入骨。她在绝望中重生，誓要让他付出代价，却发现真相令人唏嘘。</p>
+                        <div class="novel-meta">
+                            <span>字数: 85万</span>
+                            <span>状态: 连载中</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="novel-card">
+                    <div class="novel-cover">
+                        <span class="novel-tag">总裁</span>
+                        <img src="https://picsum.photos/seed/tragic3/300/420" alt="小说封面">
+                    </div>
+                    <div class="novel-info">
+                        <h3 class="novel-title"><a href="#">金丝雀的囚笼</a></h3>
+                        <p class="novel-desc">她是他的掌中玩物，也是他的软肋。在无尽的折磨与宠爱中，她逐渐迷失自我，直到遇见救赎的光。</p>
+                        <div class="novel-meta">
+                            <span>字数: 200万</span>
+                            <span>状态: 已完结</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="novel-card">
+                    <div class="novel-cover">
+                        <span class="novel-tag">玄幻</span>
+                        <img src="https://picsum.photos/seed/tragic4/300/420" alt="小说封面">
+                    </div>
+                    <div class="novel-info">
+                        <h3 class="novel-title"><a href="#">凤逆九天：废材逆袭</a></h3>
+                        <p class="novel-desc">前世她被最爱的人背叛，身死道消。这一世，她背负血海深仇，杀伐果断，只为守护心中所爱。</p>
+                        <div class="novel-meta">
+                            <span>字数: 500万</span>
+                            <span>状态: 已完结</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Latest Updates -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">最新更新</h2>
+                <a href="#" class="view-more">查看全部 &rarr;</a>
+            </div>
+            <div class="update-list">
+                <div class="update-item">
+                    <div class="update-title"><a href="#">《蚀骨危情》 第245章 雨夜惊魂</a></div>
+                    <div class="update-chapter">最新章节</div>
+                    <div class="update-time">10分钟前</div>
+                </div>
+                <div class="update-item">
+                    <div class="update-title"><a href="#">《帝王将相：孤城落月》 第180章 雪落无声</a></div>
+                    <div class="update-chapter">最新章节</div>
+                    <div class="update-time">35分钟前</div>
+                </div>
+                <div class="update-item">
+                    <div class="update-title"><a href="#">《金丝雀的囚笼》 第102章 撕裂的伪装</a></div>
+                    <div class="update-chapter">最新章节</div>
+                    <div class="update-time">1小时前</div>
+                </div>
+                <div class="update-item">
+                    <div class="update-title"><a href="#">《凤逆九天》 第890章 终极一战</a></div>
+                    <div class="update-chapter">最新章节</div>
+                    <div class="update-time">2小时前</div>
+                </div>
+                <div class="update-item">
+                    <div class="update-title"><a href="#">《废后将军》 第320章 破镜重圆</a></div>
+                    <div class="update-chapter">最新章节</div>
+                    <div class="update-time">3小时前</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reader Guide -->
+        <section class="guide-section">
+            <div class="container guide-grid">
+                <div class="guide-item">
+                    <h3>如何选择虐身文？</h3>
+                    <p>虐身文的核心在于情感的极致拉扯。在选择时，建议关注作者的笔力、人物设定的合理性以及剧情的逻辑性。</p>
+                    <ul class="guide-list">
+                        <li>偏好古风可选：宫斗、权谋题材</li>
+                        <li>偏好现代可选：职场、都市情感</li>
+                        <li>偏好强冲突可选：强制爱、误会梗</li>
+                    </ul>
+                </div>
+                <div class="guide-item">
+                    <h3>阅读注意事项</h3>
+                    <p>虐身文往往包含激烈的情感冲突和部分负面情节，读者在阅读时请保持理性，切勿模仿文中的极端行为。</p>
+                    <ul class="guide-list">
+                        <li>合理安排阅读时间</li>
+                        <li>注意心理健康</li>
+                        <li>支持正版作者</li>
+                    </ul>
+                </div>
+                <div class="guide-item">
+                    <h3>常见问题解答</h3>
+                    <p>关于网站的使用、书籍的版权问题以及阅读器的设置，请参考我们的帮助中心。</p>
+                    <ul class="guide-list">
+                        <li>如何下载离线阅读？</li>
+                        <li>如何联系作者？</li>
+                        <li>推荐阅读设备？</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>虐身文</h2>
+                    <p>致力于为读者提供最纯粹的阅读体验。在这里，每一个故事都有它的灵魂，每一份情感都值得被铭记。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>网站导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">排行榜</a></li>
+                        <li><a href="#">分类大全</a></li>
+                        <li><a href="#">标签云</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">古风虐恋</a></li>
+                        <li><a href="#">现代纠葛</a></li>
+                        <li><a href="#">重生复仇</a></li>
+                        <li><a href="#">破镜重圆</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">联系站长</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">版权合作</a></li>
+                        <li><a href="#">广告投放</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 虐身文网 版权所有. 本站内容仅供个人学习交流使用，请于下载后24小时内删除。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
