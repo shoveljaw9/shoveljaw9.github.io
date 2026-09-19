@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鞍马 - 传统杂技与竞技体操基础动作详解</title>
+    <meta name="description" content="鞍马专业指南：详细介绍鞍马的历史起源、技术动作分类、训练要点及安全注意事项。提供鞍马动作图解、器械规格参数及初级进阶教程。">
+    <meta name="keywords" content="鞍马,体操,竞技体操,鞍马动作,体操训练,鞍马支撑摆动,鞍马侧移">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --header-height: 70px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 布局容器 */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            height: var(--header-height);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 主要内容区 */
+        main {
+            flex: 1;
+            padding: 3rem 0;
+        }
+
+        /* 动作分类网格 */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .card-img-placeholder::after {
+            content: "鞍马示意图";
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .card-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #34495e;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* 详细介绍区域 */
+        .info-section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.2rem;
+        }
+
+        .highlight-box {
+            background-color: #fff5f5;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .highlight-box strong {
+            color: #c0392b;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 器械规格 */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .specs-table th {
+            background-color: #f1f3f5;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            display: none;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: "+";
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #bdc3c7;
+            text-decoration: none;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background-color: var(--card-bg);
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                padding: 1rem;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .specs-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>◆</span> 鞍马百科
+            </a>
+            <button class="mobile-menu-btn" aria-label="菜单">☰</button>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#intro" class="active">动作介绍</a></li>
+                    <li><a href="#categories">动作分类</a></li>
+                    <li><a href="#training">训练要点</a></li>
+                    <li><a href="#specs">器械规格</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>鞍马基础动作详解</h1>
+            <p>从支撑摆动到交叉移位，全面解析竞技体操中极具观赏性的器械项目</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 核心概念介绍 -->
+        <section id="intro">
+            <h2 class="section-title">什么是鞍马？</h2>
+            <div class="info-section">
+                <div class="info-grid">
+                    <div>
+                        <p>鞍马是男子竞技体操项目之一，也是难度最高的器械项目之一。运动员在马鞍形的器械上，通过两臂支撑身体进行大幅度摆动和交叉动作。</p>
+                        <br>
+                        <p>鞍马动作的核心在于“摆动”与“转换”。不同于自由体操的跳跃，鞍马要求运动员在器械上保持连续的动态平衡。优秀的鞍马动作通常要求肌肉控制力极强，且动作幅度大、节奏感好。</p>
+                    </div>
+                    <div>
+                        <ul class="info-list">
+                            <li><strong>起源：</strong>源于古代马术训练，后演变为体操项目。</li>
+                            <li><strong>特点：</strong>支撑摆动、移位、交叉、全旋。</li>
+                            <li><strong>核心力量：</strong>上肢支撑力、腰腹控制力。</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>安全提示：</strong>鞍马动作对肩关节和手腕压力较大，训练前必须充分热身，并佩戴护腕。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 动作分类 -->
+        <section id="categories">
+            <h2 class="section-title">主要动作分类</h2>
+            <div class="grid-container">
+                <!-- 卡片 1 -->
+                <article class="card">
+                    <div class="card-img-placeholder"></div>
+                    <div class="card-content">
+                        <h3>支撑摆动</h3>
+                        <p>这是鞍马的基础动作。运动员通过两臂在马鞍环上支撑，利用身体重心的起伏带动双腿进行前后左右的摆动。动作要求节奏稳定，摆幅达到最大。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- 卡片 2 -->
+                <article class="card">
+                    <div class="card-img-placeholder"></div>
+                    <div class="card-content">
+                        <h3>交叉与移位</h3>
+                        <p>在摆动过程中，双腿在空中交叉（交叉）或越过马身（移位）。这是鞍马最具标志性的视觉特征，要求极高的空间感知能力和瞬间爆发力。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </article>
+
+                <!-- 卡片 3 -->
+                <article class="card">
+                    <div class="card-img-placeholder"></div>
+                    <div class="card-content">
+                        <h3>全旋</h3>
+                        <p>以单臂支撑为轴，身体在垂直面内进行360度旋转。包括经倒立的全旋、水平全旋等。全旋是展示运动员核心力量和身体控制力的关键动作。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 训练与安全 -->
+        <section id="training">
+            <h2 class="section-title">训练要点与注意事项</h2>
+            <div class="info-section">
+                <h3>技术要点</h3>
+                <ul class="info-list">
+                    <li><strong>保持节奏：</strong>切勿急于求成，动作必须连贯，保持每秒1-2次的摆动频率。</li>
+                    <li><strong>两臂位置：</strong>两臂应在马鞍环的垂直面上，尽量靠近身体，避免过度外展。</li>
+                    <li><strong>手脚配合：</strong>摆动时手脚配合要协调，手部要像“抓着”器械一样有力。</li>
+                </ul>
+
+                <h3 style="margin-top: 2rem;">常见伤病预防</h3>
+                <p>鞍马训练容易导致肩部损伤和腕关节劳损。建议训练后进行肩袖肌群和手腕的拉伸放松。</p>
+            </div>
+        </section>
+
+        <!-- 器械规格 -->
+        <section id="specs">
+            <h2 class="section-title">国际体操联合会（FIG）标准规格</h2>
+            <div class="info-section">
+                <p>标准的男子鞍马器械尺寸严格规定，以确保比赛的公平性和安全性。</p>
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>参数</th>
+                            <th>数值</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>长</td>
+                            <td>1600 mm</td>
+                            <td>两环中心间距</td>
+                        </tr>
+                        <tr>
+                            <td>高</td>
+                            <td>1050 mm</td>
+                            <td>地面至环上沿</td>
+                        </tr>
+                        <tr>
+                            <td>环宽</td>
+                            <td>40 mm</td>
+                            <td>环直径</td>
+                        </tr>
+                        <tr>
+                            <td>环直径</td>
+                            <td>40 mm</td>
+                            <td>环直径</td>
+                        </tr>
+                        <tr>
+                            <td>环距</td>
+                            <td>40-50 mm</td>
+                            <td>两环间距可调</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <h2 class="section-title">常见问题</h2>
+            <div class="info-section">
+                <div class="faq-item">
+                    <div class="faq-question">鞍马和单杠有什么区别？</div>
+                    <div class="faq-answer">
+                        <p>鞍马主要依靠身体重心的摆动和两臂支撑完成动作，强调水平面上的控制；而单杠主要依靠悬垂摆动、转体和腾越等垂直面动作，对引体向上的力量要求更高。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">初学者应该如何开始练习？</div>
+                    <div class="faq-answer">
+                        <p>初学者应先从简单的支撑摆动开始，熟练掌握单臂支撑和简单的移位。建议在保护下进行练习，重点加强上肢力量和核心稳定性训练。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">比赛中允许哪些违规动作？</div>
+                    <div class="faq-answer">
+                        <p>比赛中禁止“骑撑”动作（即双腿跨在两环之间），除非是为了完成特定的动作转换。此外，严禁单臂支撑时身体过度外展或失去节奏。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>鞍马百科</h4>
+                    <p>专注于竞技体操鞍马项目的知识普及、动作解析与教学指导。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">动作介绍</a></li>
+                        <li><a href="#categories">分类详解</a></li>
+                        <li><a href="#specs">器械标准</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>免责声明</h4>
+                    <p style="font-size: 0.9rem; color: #bdc3c7;">本站内容仅供参考，训练请务必在专业教练指导下进行，注意安全。</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 鞍马百科网. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navList = document.querySelector('#nav-list');
+
+        menuBtn.addEventListener('click', () => {
+            navList.classList.toggle('show');
+        });
+
+        // FAQ 手风琴效果
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // 关闭其他已打开的项
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前项状态
+                item.classList.toggle('active');
+            });
+        });
+
+        // 导航点击高亮与平滑滚动
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // 移除所有 active 类
+                document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+                // 添加 active 类到当前点击项
+                this.classList.add('active');
+
+                // 隐藏菜单（移动端）
+                navList.classList.remove('show');
+
+                // 平滑滚动
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
